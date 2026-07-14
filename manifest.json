@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Student Discount Radar",
+  "version": "1.0",
+  "description": "Automatically alerts you if the current website offers a student discount.",
+  "permissions": ["tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
